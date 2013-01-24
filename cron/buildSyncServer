@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+location=/home/ocoutts/workspace/funksmoke
+rm -rf $location/server-full/
+cd $location
+hg clone https://hg.mozilla.org/services/server-full
+cd server-full
+make build
+rm $location/server-full/etc/sync.conf
+cp $location/cron/sync.conf $location/server-full/etc/
+$location/server-full/bin/easy_install Mysql-Python
+bin/paster serve development.ini

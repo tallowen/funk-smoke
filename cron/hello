@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+location=owen
+echo $location

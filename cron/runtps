@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+binary=/home/ocoutts/applications/firefox/firefox
+config=/home/ocoutts/workspace/tps/config.json
+cd /home/ocoutts/workspace/tps/
+
+runtps --testfile=test_sync.js --binary=$binary --config=$config
+
